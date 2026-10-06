@@ -1,4 +1,4 @@
-# The Internet 0.51.0 (6, September 2018)
+# The Internet 0.58.0 (Ruby 3.4.2)
 =======
 
 An example application that captures prominent and ugly functionality found on the web. Perfect for writing automated acceptance tests against.
@@ -8,17 +8,20 @@ Deployed and available at [http://the-internet.herokuapp.com](http://the-interne
 ## Available Examples:
 
 + [A/B Testing](http://the-internet.herokuapp.com/abtest)
++ [Add/Remove Elements](http://the-internet.herokuapp.com/add_remove_elements/)
 + [Basic Auth](http://the-internet.herokuapp.com/basic_auth) (user and pass: admin)
 + [Broken Images](http://the-internet.herokuapp.com/broken_images)
 + [Challenging DOM](http://the-internet.herokuapp.com/challenging_dom)
 + [Checkboxes](http://the-internet.herokuapp.com/checkboxes)
 + [Context Menu](http://the-internet.herokuapp.com/context_menu)
++ [Digest Authentication](http://the-internet.herokuapp.com/digest_auth) (user and pass: admin)
 + [Disappearing Elements](http://the-internet.herokuapp.com/disappearing_elements)
 + [Drag and Drop](http://the-internet.herokuapp.com/drag_and_drop)
 + [Dropdown](http://the-internet.herokuapp.com/dropdown)
 + [Dynamic Content](http://the-internet.herokuapp.com/dynamic_content)
 + [Dynamic Controls](http://the-internet.herokuapp.com/dynamic_controls)
 + [Dynamic Loading](http://the-internet.herokuapp.com/dynamic_loading)
++ [Entry Ad](http://the-internet.herokuapp.com/entry_ad)
 + [Exit Intent](http://the-internet.herokuapp.com/exit_intent)
 + [File Download](http://the-internet.herokuapp.com/download)
 + [File Upload](http://the-internet.herokuapp.com/upload)
@@ -30,6 +33,7 @@ Deployed and available at [http://the-internet.herokuapp.com](http://the-interne
 + [Horizontal Slider](http://the-internet.herokuapp.com/horizontal_slider)
 + [Hovers](http://the-internet.herokuapp.com/hovers)
 + [Infinite Scroll](http://the-internet.herokuapp.com/infinite_scroll)
++ [Inputs](http://the-internet.herokuapp.com/inputs)
 + [JQuery UI Menus](http://the-internet.herokuapp.com/jqueryui/menu)
 + [JavaScript Alerts](http://the-internet.herokuapp.com/javascript_alerts)
 + [JavaScript onload event error](http://the-internet.herokuapp.com/javascript_error)
@@ -40,10 +44,12 @@ Deployed and available at [http://the-internet.herokuapp.com](http://the-interne
 + [Notification Messages](http://the-internet.herokuapp.com/notification_message)
 + [Redirect Link](http://the-internet.herokuapp.com/redirector)
 + [Secure File Download](http://the-internet.herokuapp.com/download_secure)
++ [Shadow DOM](http://the-internet.herokuapp.com/shadowdom)
 + [Shifting Content](http://the-internet.herokuapp.com/shifting_content)
 + [Slow Resources](http://the-internet.herokuapp.com/slow)
 + [Sortable Data Tables](http://the-internet.herokuapp.com/tables)
 + [Status Codes](http://the-internet.herokuapp.com/status_codes)
++ [Subdirectories](http://the-internet.herokuapp.com/subdirectories)
 + [Typos](http://the-internet.herokuapp.com/typos)
 + [WYSIWYG Editor](http://the-internet.herokuapp.com/tinymce)
 
@@ -61,17 +67,26 @@ tldr;
 
 ## Getting Started
 
-Install your dependencies:
+Install Ruby 3.4.2, then install the project dependencies:
 
-    bundle install
+```sh
+bundle install
+```
 
-Start the server:
+Start the server on port 5000:
 
-    rackup
+```sh
+bundle exec rackup --host 0.0.0.0 -p 5000
+```
 
-Load the page you want to see in your browser:
+Open the application in your browser:
 
-    http://localhost:9292/url_path
+```text
+http://localhost:5000/
+```
+
+To view a particular example, append its path, such as `http://localhost:5000/login`.
+Stop the server with `Ctrl+C`.
 
 ## See Also
 

@@ -1,3 +1,26 @@
+#0.58.0
++ Added /shadowdom example (PR #45)
+
+#0.57.0
++ Added sitemap
+
+#0.56.0
++ Changed /context_menu to fire a JS alert on a context click. Fixes #12
++ Added an input field to the key_presses example, and simplified its JS
+
+#0.55.0
++ Made it so the example on /dropdown dynamically updates the "selected" attribute to the currently selected option
+
+#0.54.0
++ Added an example for digest authentication
+
+#0.53.0
++ Added an example to demonstrate a number input
+
+#0.52.0
++ Added an example to demonstrate a display ad shortly after page load (/entry_ad)
++ Added an example to easily add and remove elements from the page (/add_remove_elements/)
+
 #0.51.0
 + Added an async enable/disable element example to /dynamic_controls
 

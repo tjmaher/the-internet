@@ -78,3 +78,5 @@ Stop the webservice:
 
 * git status
 * git add .
+* git commit -m "Upgrade project to Ruby 3.4 and modernize Dockerfile for Render deployment"
+* git remote set-url origin https://github.com/tjmaher/the-internet

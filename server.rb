@@ -6,6 +6,7 @@ require 'sinatra/cookies'
 require 'faker'
 
 class Protected < Sinatra::Base
+  set :host_authorization, permitted_hosts: []
   register Sinatra::Flash
 
   get '/' do
@@ -23,6 +24,7 @@ class Protected < Sinatra::Base
 end
 
 class Public < Sinatra::Base
+  set :host_authorization, permitted_hosts: []
   helpers Sinatra::Cookies
   set :cookie_options, :domain => nil
   enable :sessions, :logging

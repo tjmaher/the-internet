@@ -96,3 +96,27 @@ Stop the webservice:
 * git commit -m "Upgrade project to Ruby 3.4 and modernize Dockerfile for Render deployment"
 * git remote set-url origin https://github.com/tjmaher/the-internet
 * git push -u origin main
+
+## Fix Sinatra problems
+
+Going to https://the-internet-8uaj.onrender.com/ showed:
+
+`Host not permitted`
+
+Google AI said that:
+
+"Starting with version 4.1.0, Sinatra introduced strict, built-in security middleware called Rack::Protection::HostAuthorization. By default, this middleware blocks HTTP requests unless the accessing URL matches an allowed list (typically defaulting only to localhost). When Render routes traffic to your app through the-internet-8uaj.onrender.com, Sinatra flags it as an unrecognized hostname and throws a 403 Forbidden response with the body text 'Host not permitted'"
+
+
+server.rb
+```class Protected < Sinatra::Base
+  set :host_authorization, permitted_hosts: []
+  register Sinatra::Flash
+```
+## Change Name of Render Web Service
+
+Who would have thought that a name like "the-internet" would be so common?
+
+Render adds a random four characters on a webservice with a common name. 
+
+I decided to make the web address: the-internet-tjmaher.onrender.com

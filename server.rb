@@ -3,8 +3,6 @@ require 'sinatra'
 require 'sinatra/flash'
 require 'sinatra/contrib'
 require 'sinatra/cookies'
-require 'zurb-foundation'
-require 'compass'
 require 'faker'
 
 helpers Sinatra::Cookies

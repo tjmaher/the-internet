@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: the-internet-modern
+    env: ruby
+    buildCommand: |
+      bundle config set --local without "development test"
+      bundle install
+    startCommand: bundle exec rackup -p $PORT -o 0.0.0.0
+    envVars:
+      - key: RUBY_VERSION
+        value: "3.4.2"

@@ -74,9 +74,25 @@ Connect to the webservice on your local machine:
 Stop the webservice:
 * CNTRL + C
 
+## Add a RENDER.YAML
+
+```services:
+  - type: web
+    name: the-internet-modern
+    env: ruby
+    buildCommand: |
+      bundle config set --local without "development test"
+      bundle install
+    startCommand: bundle exec rackup -p $PORT -o 0.0.0.0
+    envVars:
+      - key: RUBY_VERSION
+        value: "3.4.2"
+```
+
 ## Push the Code
 
 * git status
 * git add .
 * git commit -m "Upgrade project to Ruby 3.4 and modernize Dockerfile for Render deployment"
 * git remote set-url origin https://github.com/tjmaher/the-internet
+* git push -u origin main

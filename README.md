@@ -1,9 +1,15 @@
 # The Internet 0.58.0 (Ruby 3.4.2)
 =======
 
-An example application that captures prominent and ugly functionality found on the web. Perfect for writing automated acceptance tests against.
+Originally created by Dave Haeffner, this example application "captures prominent and ugly functionality found on the web. Perfect for writing automated acceptance tests against".
 
-Deployed and available at [http://the-internet.herokuapp.com](http://the-internet.herokuapp.com).
+When T.J. Maher saw that this test site was no longer working very well at [http://the-internet.herokuapp.com](http://the-internet.herokuapp.com), he decided to take look to see if he could use Google AI to figure out how it worked, and deploy it elsewhere, as a learning exercise.
+
+**Blog: Refactoring The-Internet:** 
+* [Fork, Fix, Farewell to Heroku and hello to Render!](https://www.tjmaher.com/2026/10/refactoring-internet-fork-fix-farewell.html)
+* [Deploying the web app to Render](https://www.tjmaher.com/2026/10/refactoring-theinternet-deploying-web.html)
+
+T.J.'s forked copy of The-Internet (this repo) is hosted at [https://the-internet-8uaj.onrender.com/](https://the-internet-8uaj.onrender.com/)
 
 ## Available Examples:
 
